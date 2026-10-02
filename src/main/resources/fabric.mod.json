@@ -1,0 +1,41 @@
+{
+	"schemaVersion": 1,
+	"id": "emberfall-core",
+	"version": "${version}",
+	"name": "Emberfall Core",
+	"description": "Core mod for Emberfall Events",
+	"authors": [
+		"SpaxxV"
+	],
+	"contact": {
+		"homepage": "https://emberfallevents.com/",
+		"sources": ""
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/emberfall-core/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.emberfallevents.core.EmberfallCore"
+		],
+		"client": [
+			"com.emberfallevents.core.client.EmberfallCoreClient"
+		],
+		"fabric-datagen": [
+			"com.emberfallevents.core.client.EmberfallCoreDataGenerator"
+		]
+	},
+	"mixins": [
+		"emberfall-core.mixins.json",
+		{
+			"config": "emberfall-core.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.19.3",
+		"minecraft": "~1.21.1",
+		"java": ">=21",
+		"fabric-api": "*"
+	}
+}
