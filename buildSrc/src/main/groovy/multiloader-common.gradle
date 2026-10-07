@@ -1,0 +1,18 @@
+plugins {
+    id 'java-library'
+}
+
+base {
+    archivesName = "${mod_id}-${minecraft_version}-${project.name}"
+}
+
+java {
+    toolchain.languageVersion = JavaLanguageVersion.of(21)
+    withSourcesJar()
+}
+
+jar {
+    from(rootProject.file("LICENSE")) {
+        rename { "${it}" }
+    }
+}

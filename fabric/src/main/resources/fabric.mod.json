@@ -1,0 +1,29 @@
+{
+	"schemaVersion": 1,
+	"id": "emberfall-core",
+	"version": "${version}",
+	"name": "Emberfall Core",
+	"description": "Core mod for civilization events",
+	"authors": [
+		"SpaxxV"
+	],
+	"contact": {
+		"homepage": "https://solarflareciv.com/",
+		"sources": ""
+	},
+	"license": "CC0-1.0",
+	"icon": "icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.solarflareciv.core.impl.EmberfallCoreFabric"
+		]
+	},
+	"mixins": [],
+	"depends": {
+		"fabricloader": ">=0.19.3",
+		"minecraft": "~1.21.1",
+		"java": ">=21",
+		"fabric-api": "*"
+	}
+}
